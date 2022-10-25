@@ -2,16 +2,16 @@
 
 Ingredients Functions repository.
 
-## Instalation
+## Installation
 
-Recreate the environemt using conda:
+Recreate the environment using conda:
 
 ```bash
 conda env create -f environment.yml
 conda activate ingredient-functions
 ```
 
-Run the example usage:
+Run the example:
 
 ```bash
 python openai_example.py
