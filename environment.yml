@@ -1,0 +1,9 @@
+name: ingredient-functions
+dependencies:
+  - python=3.10
+  - pandas=1.4.*
+  - pytables=3.7.*
+  - more-itertools
+  - pip
+  - pip:
+    - openai==0.24.*
