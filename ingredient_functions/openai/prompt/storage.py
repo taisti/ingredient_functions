@@ -8,7 +8,7 @@ class DiskStorage:
         self._store = pd.HDFStore(path=(data_path / session_id).with_suffix('.h5'), mode='a')
 
     def store(self, data: pd.DataFrame, *, group: str) -> None:
-        self._store.append(key=group, value=data, min_itemsize=128)
+        self._store.append(key=group, value=data, min_itemsize=512)
         self._store.flush(fsync=True)  # TODO
 
     def get(self, *, group: str) -> pd.DataFrame:

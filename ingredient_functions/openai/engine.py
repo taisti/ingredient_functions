@@ -90,6 +90,7 @@ class PromptEngine:
         return self._storage.get(group=group)
 
     def _ask_prompt(self, prompt: str):
+        # TODO: Rate limit seems to not propagate back
         response = self._openai.create(
             prompt=prompt,
             model=self._model,

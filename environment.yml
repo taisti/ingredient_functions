@@ -4,6 +4,7 @@ dependencies:
   - pandas=1.4.*
   - pytables=3.7.*
   - more-itertools
+  - jupyter
   - pip
   - pip:
     - openai==0.24.*
