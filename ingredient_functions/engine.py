@@ -5,14 +5,14 @@ from itertools import repeat
 
 import pandas as pd
 
-from ingredient_functions.openai.prompt.answer_parser import ListParser
-from ingredient_functions.openai.prompt.storage import DiskStorage
-from ingredient_functions.openai.prompt.template import BasePrompt, DescribingPrompt, ListingPrompt
-from ingredient_functions.openai.utils.login import OpenAILogin
+from ingredient_functions.prompt.answer_parser import ListParser
+from ingredient_functions.prompt.storage import DiskStorage
+from ingredient_functions.prompt.template import BasePrompt, DescribingPrompt, ListingPrompt
+from ingredient_functions.utils.login import OpenAILogin
 
 
 class Model(Enum):
-    DAVINCI = "text-davinci-002"
+    DAVINCI = "text-davinci-003"
     CURIE = "text-curie-001"
     BABBAGE = "text-babbage-001"
     ADA = "text-ada-001"

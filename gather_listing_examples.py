@@ -1,13 +1,16 @@
 import json
-from ingredient_functions.openai.engine import PromptEngine
-from ingredient_functions.openai.prompt import ListingPrompt
+import time
+from ingredient_functions.engine import PromptEngine
+from ingredient_functions.prompt import ListingPrompt
 
 
 with open("./data/1000_przepisow.json", "r", encoding="utf-8") as f:
-    recipes = json.load(f)["items"][924:]
+    recipes = json.load(f)["items"][:100]
 
 engine = PromptEngine("data/listing_exploration")
 prompt = ListingPrompt(classifier_word="ingredients")
 
+
 for recipe in recipes:
+    time.sleep(3)
     out = engine.prompt(prompt, prompt_kwargs={"prompt_phrases": [recipe["title"]]})

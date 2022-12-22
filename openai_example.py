@@ -1,5 +1,5 @@
-from ingredient_functions.openai.engine import PromptEngine
-from ingredient_functions.openai.prompt import DescribingPrompt, ListingPrompt
+from ingredient_functions.engine import PromptEngine
+from ingredient_functions.prompt import DescribingPrompt, ListingPrompt
 
 
 engine = PromptEngine("test-session")
