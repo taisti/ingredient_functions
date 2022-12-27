@@ -22,5 +22,5 @@ engine = PromptEngine("data/function_exploration")
 
 
 for recipe, ingredients in prompt_phrases_dict.items():
-    time.sleep(3)
+    time.sleep(5)
     out = engine.prompt(prompt_2, prompt_kwargs={"prompt_phrases_dict": {recipe: ingredients}})
